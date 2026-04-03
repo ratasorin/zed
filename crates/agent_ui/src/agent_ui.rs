@@ -679,7 +679,8 @@ mod tests {
     use gpui::{BorrowAppContext, TestAppContext, px};
     use project::DisableAiSettings;
     use settings::{
-        DockPosition, NotifyWhenAgentWaiting, PlaySoundWhenAgentDone, Settings, SettingsStore,
+        ContextWindowDisplay, DockPosition, NotifyWhenAgentWaiting, PlaySoundWhenAgentDone,
+        Settings, SettingsStore,
     };
 
     #[gpui::test]
@@ -723,6 +724,7 @@ mod tests {
             message_editor_min_lines: 1,
             tool_permissions: Default::default(),
             show_turn_stats: false,
+            context_window_display: ContextWindowDisplay::default(),
             show_merge_conflict_indicator: true,
             new_thread_location: Default::default(),
             sidebar_side: Default::default(),
